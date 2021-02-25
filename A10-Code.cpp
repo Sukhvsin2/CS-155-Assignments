@@ -12,7 +12,7 @@ using namespace std;
 
 int main(){
 	// Initialization of variable
-	int temp;
+	int temp, counter = 0;
 	
 	// Sentinel Controlled loop
 	// It'd be only break if the temp would be equals to -1
@@ -22,9 +22,12 @@ int main(){
 		cout<<"Enter a positive integer, For exit type -1 : ";
 		cin>>temp;
 		
-		// Checking if the input is between the range & printing the number.
-		if(49 < temp && temp < 76 ) cout<<"Entered number is in between 50-75 : "<<temp<<endl;
+		// Checking if the input number is in between 50-75
+		if(49 < temp && temp < 76 ) counter++;
 	}
+	
+	// Printing how many times user entered the number which is in b/w [50-75]
+	cout<<endl<<"There were "<<counter<<" number in between 50-75 range that you entered!"<<endl;
 	
 	return 0;
 }
