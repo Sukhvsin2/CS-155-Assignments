@@ -47,11 +47,18 @@ int main(){
 	Outgoing Data: None
 **/
 void printMiddle(int arr[][3], int r){
+	int rMValue;
+	if(r % 2 == 0){
+		rMValue = (r / 2) - 1; 
+	}else{
+		rMValue = (r / 2);
+	}
+	
 	cout<<"Middle Row: ";
 	
 	// printing middle row
 	for(int i=0;i<3;i++){
-		cout<<arr[1][i]<<" ";
+		cout<<arr[rMValue][i]<<" ";
 	}
 	
 	// printing middle column
